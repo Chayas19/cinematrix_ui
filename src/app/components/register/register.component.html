@@ -1,0 +1,67 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="bi bi-camera-reels"></i> CineMatrix</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <!-- Your nav items here -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Signup Page -->
+<div class="container-fluid">
+  <div class="row vh-100">
+    <!-- Left Column with Dummy Image -->
+    <div class="col-md-6 d-none d-md-block p-0">
+      <img src="https://img.freepik.com/premium-photo/composition-movie-elements-red-background-with-copy-space_23-2148457860.jpg?w=1060" alt="Dummy Image" class="img-fluid h-100 w-100">
+    </div>
+    <!-- Right Column with Registration Form -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center p-4">
+      <div class="registration-form w-100">
+        <h2 class="text-center mb-4">Register</h2>
+        <form [formGroup]="registerForm">
+          <div class="mb-3 position-relative">
+            <i class="bi bi-person position-absolute top-50 start-0 translate-middle-y ms-2"></i>
+            <input formControlName="name" type="text" class="form-control ps-5" id="name" placeholder="Name">
+          </div>
+          <div class="mb-3 position-relative">
+            <i class="bi bi-envelope position-absolute top-50 start-0 translate-middle-y ms-2"></i>
+            <input formControlName="email" type="email" class="form-control ps-5" id="email" placeholder="Email">
+          </div>
+          <div class="mb-3 position-relative">
+            <i class="bi bi-lock position-absolute top-50 start-0 translate-middle-y ms-2"></i>
+            <input formControlName="password" type="password" class="form-control ps-5" id="password" placeholder="Password">
+          </div>
+          <div class="mb-3 position-relative">
+            <i class="bi bi-shield-check position-absolute top-50 start-0 translate-middle-y ms-2"></i>
+            <input formControlName="confirmPassword" type="password" class="form-control ps-5" id="confirmPassword" placeholder="Confirm Password" required>
+          </div>
+          <div class="mb-3 position-relative">
+            <i class="bi bi-telephone position-absolute top-50 start-0 translate-middle-y ms-2"></i>
+            <input formControlName="phoneNumber" type="number" class="form-control ps-5" id="phoneNumber" placeholder="Enter your phone number" required>
+          </div>
+          <div class="mb-3">
+            <a href="/forget-password" class="text-decoration-none">Forgot password?</a>
+          </div>
+          <button type="submit" (click)="onSubmit()" class="btn btn-danger w-100">Sign Up</button>
+          <hr class="my-4">
+          <button type="button" class="btn btn-light w-100">
+            <!-- <i class="bi bi-google me-2"></i> Sign up with Google -->
+            <i class="bi bi-google me-2" ></i> Sign up with Google
+
+
+          </button>
+        </form>
+       
+      
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add this CSS to your global styles (styles.css or styles.scss) */
+.toast-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1050;
+    padding: 1rem;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure the spinner is above other content */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+  padding: 20px; /* Optional: space around the spinner */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.mat-spinner {
+  color: grey; /* Customize the spinner color */
+  height: 60px; /* Adjust size as needed */
+  width: 60px;  /* Adjust size as needed */
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
