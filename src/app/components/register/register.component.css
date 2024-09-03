@@ -96,3 +96,120 @@ img {
   width: 100%;
   display: block; /* Ensure image does not cause layout issues */
 }
+/* Spinner Styles */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.4em;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #141414;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e50914;
+}
+
+.navbar-brand i {
+  margin-right: 8px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #e50914;
+}
+
+.navbar-nav .nav-link.active {
+  color: #e50914;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+}
+
+/* Styles for Registration Form */
+.registration-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.registration-form .form-control {
+  border-radius: 4px;
+}
+
+.registration-form .form-control:focus {
+  box-shadow: none;
+  border-color: #e50914;
+}
+
+.registration-form .btn {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+}
+
+.registration-form .btn:hover {
+  background-color: #b20710;
+}
+
+.registration-form .btn-light {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+.registration-form .btn-light:hover {
+  background-color: #f1f1f1;
+}
+
+.registration-form .bi {
+  font-size: 1.2rem;
+}
+
+.registration-form .position-relative {
+  margin-bottom: 1rem;
+}
+
+.registration-form .ps-5 {
+  padding-left: 2.5rem;
+}
+
+img {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  display: block;
+}

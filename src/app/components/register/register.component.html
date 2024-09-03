@@ -1,18 +1,9 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#"><i class="bi bi-camera-reels"></i> CineMatrix</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <!-- Your nav items here -->
-      </ul>
-    </div>
-  </div>
-</nav>
 
+<div *ngIf="isLoading" class="spinner-overlay">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
 
 
 <!-- Signup Page -->
@@ -26,7 +17,8 @@
     <div class="col-md-6 d-flex align-items-center justify-content-center p-4">
       <div class="registration-form w-100">
         <h2 class="text-center mb-4">Register</h2>
-        <form [formGroup]="registerForm">
+        <!-- <form *ngIf="!isLoading" [formGroup]="registerForm"> -->
+          <form [formGroup]="registerForm"> 
           <div class="mb-3 position-relative">
             <i class="bi bi-person position-absolute top-50 start-0 translate-middle-y ms-2"></i>
             <input formControlName="name" type="text" class="form-control ps-5" id="name" placeholder="Name">
@@ -37,12 +29,39 @@
           </div>
           <div class="mb-3 position-relative">
             <i class="bi bi-lock position-absolute top-50 start-0 translate-middle-y ms-2"></i>
-            <input formControlName="password" type="password" class="form-control ps-5" id="password" placeholder="Password">
-          </div>
-          <div class="mb-3 position-relative">
+            <input
+                formControlName="password"
+                #passwordInput
+                type="password"
+                class="form-control ps-5"
+                id="password"
+                placeholder="Password"
+                autocomplete="new-password"
+            />
+            <i
+                class="bi bi-eye-slash position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer"
+                (click)="passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password'"
+            ></i>
+        </div>
+        
+        
+        <div class="mb-3 position-relative">
             <i class="bi bi-shield-check position-absolute top-50 start-0 translate-middle-y ms-2"></i>
-            <input formControlName="confirmPassword" type="password" class="form-control ps-5" id="confirmPassword" placeholder="Confirm Password" required>
-          </div>
+            <input
+                formControlName="confirmPassword"
+                #confirmPasswordInput
+                type="password"
+                class="form-control ps-5"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                required
+            />
+            <i
+                class="bi bi-eye-slash position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer"
+                (click)="confirmPasswordInput.type = confirmPasswordInput.type === 'password' ? 'text' : 'password'"
+            ></i>
+        </div>
+        
           <div class="mb-3 position-relative">
             <i class="bi bi-telephone position-absolute top-50 start-0 translate-middle-y ms-2"></i>
             <input formControlName="phoneNumber" type="number" class="form-control ps-5" id="phoneNumber" placeholder="Enter your phone number" required>

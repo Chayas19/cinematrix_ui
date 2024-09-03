@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoggingInterceptor } from './interceptor/interceptor';
 import { OtpComponent } from './components/otp/otp.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 
 // import { NgxSpinnerModule } from 'ngx-spinner';
 // import { NgxSpinnerModule } from 'ngx-spinner';
@@ -30,7 +32,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ResetPasswordComponent,
     EmailVerifyComponent,
     HomeComponent,
-    OtpComponent
+    OtpComponent,
+    NavbarComponent
+
   ],
   imports: [
     BrowserModule,

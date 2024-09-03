@@ -38,7 +38,7 @@
 }
 
 /* Styles for Registration Form */
-.registration-form {
+.verification-form {
   max-width: 400px;
   width: 100%;
   padding: 20px;
@@ -48,44 +48,44 @@
   margin: 0 auto; /* Center the form horizontally */
 }
 
-.registration-form .form-control {
+.verification-form.form-control {
   border-radius: 4px;
 }
 
-.registration-form .form-control:focus {
+.verification-form.form-control:focus {
   box-shadow: none;
   border-color: #e50914;
 }
 
-.registration-form .btn {
+.verification-form .btn {
   background-color: #e50914;
   color: #fff;
   border: none;
 }
 
-.registration-form .btn:hover {
+.verification-form .btn:hover {
   background-color: #b20710;
 }
 
-.registration-form .btn-light {
+.verification-form .btn-light {
   background-color: #fff;
   color: #000;
   border: 1px solid #ddd;
 }
 
-.registration-form .btn-light:hover {
+.verification-form .btn-light:hover {
   background-color: #f1f1f1;
 }
 
-.registration-form .bi {
+.verification-form.bi {
   font-size: 1.2rem;
 }
 
-.registration-form .position-relative {
+.verification-form .position-relative {
   margin-bottom: 1rem;
 }
 
-.registration-form .ps-5 {
+.verification-form .ps-5 {
   padding-left: 2.5rem;
 }
 

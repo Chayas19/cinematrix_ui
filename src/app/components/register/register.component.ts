@@ -14,8 +14,8 @@ import { ToastrService } from 'ngx-toastr';
 export class RegisterComponent implements OnInit {
 
   registerForm!: FormGroup;
-  isLoading = false; // Add this variable to control spinner visibility
-
+  isLoading = false; 
+  
   constructor(
     private formBuilder: FormBuilder,
     private toastr: ToastrService,
@@ -50,17 +50,14 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     if (this.registerForm.valid) {
       const { name, email, password, confirmPassword,phoneNumber } = this.registerForm.value;
-      // this.isLoading = true; // Show spinner
-
-     // this.spinner.show(); // Show the loader
       
       this.http.post('https://localhost:7133/api/UserAccount/register', 
         { name, email, password, confirmPassword,phoneNumber },
         { responseType: 'text' } // Expecting text response
       ).subscribe(
         (response: string) => {
-        //  this.spinner.hide();
-        // this.isLoading = false; // Show spinner
+          // this.isLoading = false; 
+        
           try {
             this.toastr.success(response || 'User account is created successfully, please verify your email!');
           } catch (e) {
@@ -69,9 +66,8 @@ export class RegisterComponent implements OnInit {
           this.router.navigate(['/email-verify']);
         },
         (error) => {
-          // this.isLoading = false; // Show spinner
-
-          //this.spinner.hide(); // Hide the loader
+          // this.isLoading = false; 
+         
           let errorMessage = 'Registration Unsuccessful. Please try again.';
           if (error.error) {
             try {

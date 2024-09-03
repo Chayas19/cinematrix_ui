@@ -38,7 +38,7 @@
 }
 
 /* Styles for Registration Form */
-.registration-form {
+.login-form {
   max-width: 400px;
   width: 100%;
   padding: 20px;
@@ -52,12 +52,12 @@
   border-radius: 4px;
 }
 
-.registration-form .form-control:focus {
+.login-form .form-control:focus {
   box-shadow: none;
   border-color: #e50914;
 }
 
-.registration-form .btn {
+.login-form .btn {
   background-color: #e50914;
   color: #fff;
   border: none;
@@ -96,3 +96,8 @@ img {
   width: 100%;
   display: block; /* Ensure image does not cause layout issues */
 }
+
+.icon-large {
+  font-size: 2rem; 
+}
+
